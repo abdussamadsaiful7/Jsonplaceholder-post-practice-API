@@ -11,8 +11,14 @@ const loadData = () =>{
 
 const showData =(data) =>{
     // console.log(data.slice(0, 5));
-    for (let singleData of data){
-        console.log(singleData);
+    for (let singleData of data.slice(0, 20)){
+        const container = document.getElementById('post-info');
+        //console.log(singleData);
+        const div = document.createElement('div')
+        div.innerHTML =`
+            <h1 class="text-2xl text-center">${singleData.title}</h1>
+        `;
+        container.appendChild(div);
     }
 
 }
